@@ -11,13 +11,11 @@ Release:        4%{?dist}%{?extra_release}
 Source0:        %{name}-%{version}.tar.gz
 Patch1:         0001-in-development-Fedoras-have-updates-testing.patch
 License:        GPLv2+
-Group:          Applications/System
-
+Group:          System/Configuration/Other
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:            http://www.ovirt.org/
 BuildRequires:  python-setuptools
 BuildRequires:  automake autoconf
-
 Requires(post):  /sbin/chkconfig
 Requires(preun): /sbin/chkconfig
 %if 0%{?fedora}
