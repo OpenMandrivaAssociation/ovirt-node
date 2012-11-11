@@ -1,0 +1,24 @@
+From 6ad977a18203e847a16cba89c18274aa59401be4 Mon Sep 17 00:00:00 2001
+From: Alan Pevec <apevec@redhat.com>
+Date: Tue, 2 Aug 2011 19:06:44 +0200
+Subject: [PATCH] in development Fedoras have updates-testing
+
+---
+ recipe/Makefile.am |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/recipe/Makefile.am b/recipe/Makefile.am
+index b28203c..cca4d99 100644
+--- a/recipe/Makefile.am
++++ b/recipe/Makefile.am
+@@ -64,6 +64,7 @@ repos.ks:
+ 	    elif [ 0$(FEDORA) == 0$(CUR_DEVEL) ]; then \
+ 	        FEDORA_REPO=f$(FEDORA) ;\
+ 	        FEDORA_REPO_LOC="$(if $(FEDORA_URL),--baseurl=$(FEDORA_URL)/development/$(FEDORA)/$(ARCH)/os,--mirrorlist=$(FEDORA_MIRROR)?repo=fedora-$(FEDORA)&arch=$(ARCH))" ;\
++	        UPDATE_REPO_LINE="repo --name=$${FEDORA_REPO}-updates-testing $(if $(FEDORA_URL),--baseurl=$(FEDORA_URL)/updates/testing/$(FEDORA)/${ARCH},--mirrorlist=$(FEDORA_MIRROR)?repo=updates-testing-f$(FEDORA)&arch=$(ARCH))\n" ;\
+ 	    else \
+ 	        FEDORA_REPO=f$(FEDORA) ;\
+ 	        FEDORA_REPO_LOC="$(if $(FEDORA_URL),--baseurl=$(FEDORA_URL)/releases/$(FEDORA)/Everything/${ARCH}/os,--mirrorlist=$(FEDORA_MIRROR)?repo=fedora-$(FEDORA)&arch=$(ARCH))" ;\
+-- 
+1.7.3.4
+
