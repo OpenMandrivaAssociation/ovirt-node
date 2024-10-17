@@ -13,7 +13,7 @@ Patch1:         0001-in-development-Fedoras-have-updates-testing.patch
 License:        GPLv2+
 Group:          System/Configuration/Other
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-URL:            http://www.ovirt.org/
+URL:            https://www.ovirt.org/
 BuildRequires:  python-setuptools
 BuildRequires:  automake autoconf
 Requires(post):  /sbin/chkconfig
