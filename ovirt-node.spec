@@ -14,6 +14,8 @@ License:        GPLv2+
 Group:          System/Configuration/Other
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:            https://www.ovirt.org/
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:  python-setuptools
 BuildRequires:  automake autoconf
 Requires(post):  /sbin/chkconfig
